@@ -1,11 +1,15 @@
 //Justin Ramirez
 
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import java.util.Scanner;
 import javax.swing.*;
 
-public class GuessMyNumber extends JFrame implements ActionListener, Runnable {
+public class GuessMyNumber extends JFrame {
+    
+
+    public GuessMyNumber() {
+
+    }
+
     public static void main(String[] args) {
         int computerNum = (int) (Math.random()*100 + 1);
         int userAnswer = 0;
@@ -14,10 +18,11 @@ public class GuessMyNumber extends JFrame implements ActionListener, Runnable {
         // mode selection
         System.out.println("Please Select a mode");
         char mode = sc.next().charAt(0);
-
+        // User picks a number
+        if (mode == 'U')
         
         
-        
+        // Computer picks a number
         if (mode == 'C') {
             while (userAnswer != computerNum) {
             String response = JOptionPane.showInputDialog(null,
